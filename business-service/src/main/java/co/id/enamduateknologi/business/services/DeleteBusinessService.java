@@ -2,8 +2,8 @@ package co.id.enamduateknologi.business.services;
 
 import org.springframework.stereotype.Service;
 import co.id.enamduateknologi.business.common.service.BaseService;
-import co.id.enamduateknologi.business.model.request.DeleteBusinessRequest;
-import co.id.enamduateknologi.business.model.response.DeleteBusinessResponse;
+import co.id.enamduateknologi.business.payload.request.DeleteBusinessRequest;
+import co.id.enamduateknologi.business.payload.response.DeleteBusinessResponse;
 
 @Service
 public class DeleteBusinessService
