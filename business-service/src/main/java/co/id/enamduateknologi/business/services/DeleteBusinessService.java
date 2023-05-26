@@ -9,10 +9,12 @@ import co.id.enamduateknologi.business.payload.request.DeleteBusinessRequest;
 import co.id.enamduateknologi.business.payload.response.DeleteBusinessResponse;
 import co.id.enamduateknologi.business.repo.BusinessCategoryRelationshipRepository;
 import co.id.enamduateknologi.business.repo.BusinessRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class DeleteBusinessService
     implements BaseService<DeleteBusinessRequest, DeleteBusinessResponse> {
 

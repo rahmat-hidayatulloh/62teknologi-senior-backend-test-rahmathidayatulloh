@@ -2,7 +2,6 @@ package co.id.enamduateknologi.business.model;
 
 import java.sql.Time;
 import java.util.List;
-import java.util.Set;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UuidGenerator;
 import co.id.enamduateknologi.business.common.model.BaseEntity;
@@ -35,9 +34,6 @@ public class BusinessEntity extends BaseEntity {
   @UuidGenerator
   @Column(name = "business_id")
   private String businessId;
-
-  // @OneToMany(mappedBy = "business")
-  // private Set<BusinessCategoryRelationshipEntity> embeddedId;
 
   private String name;
 

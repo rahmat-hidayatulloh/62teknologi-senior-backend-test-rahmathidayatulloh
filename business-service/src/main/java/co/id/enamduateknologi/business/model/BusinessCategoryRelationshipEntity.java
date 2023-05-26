@@ -1,6 +1,5 @@
 package co.id.enamduateknologi.business.model;
 
-import co.id.enamduateknologi.business.common.model.BaseEntity;
 import co.id.enamduateknologi.business.model.embedded.BusinessCategoryEmbedded;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
@@ -8,6 +7,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

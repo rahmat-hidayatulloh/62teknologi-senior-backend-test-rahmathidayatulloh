@@ -1,5 +1,7 @@
 package co.id.enamduateknologi.business.payload.request;
 
+import java.sql.Time;
+import java.util.List;
 import co.id.enamduateknologi.business.common.base.BaseRequest;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,10 +21,18 @@ public class GetBusinessRequest extends BaseRequest {
    */
   private static final long serialVersionUID = 8410393612180096882L;
 
-  private String location;
-  private String latitude;
-  private String longitude;
-  private String openAt;
-  private String closedAt;
+  private List<String> categories;
+
+  private Double latitude;
+
+  private Double longitude;
+
+  private int limit;
+
+  private String sortBy;
+
+  private Time openedAt;
+
+  private Time closedAt;
 
 }

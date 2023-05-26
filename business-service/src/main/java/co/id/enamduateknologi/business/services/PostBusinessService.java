@@ -20,10 +20,12 @@ import co.id.enamduateknologi.business.payload.response.PostBusinessResponse;
 import co.id.enamduateknologi.business.repo.BusinessCategoryRelationshipRepository;
 import co.id.enamduateknologi.business.repo.BusinessCategoryRepository;
 import co.id.enamduateknologi.business.repo.BusinessRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class PostBusinessService implements BaseService<PostBusinessRequest, PostBusinessResponse> {
 
   private final BusinessCategoryRepository businessCategoryRepository;
