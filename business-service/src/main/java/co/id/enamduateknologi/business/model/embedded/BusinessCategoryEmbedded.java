@@ -1,22 +1,27 @@
 package co.id.enamduateknologi.business.model.embedded;
 
-import co.id.enamduateknologi.business.common.model.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Embeddable
 @Setter
 @Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class BusinessCategoryEmbedded extends BaseEntity {
+public class BusinessCategoryEmbedded {
 
   @Column(name = "business_id")
-  private Long businessId;
+  private String businessId;
 
   @Column(name = "category_id")
-  private Long categoryId;
+  private String categoryId;
 
 }

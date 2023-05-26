@@ -3,10 +3,13 @@ package co.id.enamduateknologi.business.model;
 import java.sql.Time;
 import java.util.List;
 import java.util.Set;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.UuidGenerator;
 import co.id.enamduateknologi.business.common.model.BaseEntity;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
@@ -27,18 +30,21 @@ import lombok.Setter;
 public class BusinessEntity extends BaseEntity {
 
   @Id
+  @GeneratedValue(generator = "UUID")
+  @GenericGenerator(name = "UUID")
+  @UuidGenerator
   @Column(name = "business_id")
-  private Long businessId;
+  private String businessId;
 
-  @OneToMany(mappedBy = "business")
-  private Set<BusinessCategoryEmbeddedEntity> embeddedId;
+  // @OneToMany(mappedBy = "business")
+  // private Set<BusinessCategoryRelationshipEntity> embeddedId;
 
   private String name;
 
   private String alias;
 
   @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-  @JoinColumn(name = "businessEntity")
+  @JoinColumn(name = "business_id")
   private List<BusinessLocationEntity> location;
 
   private Double distance;
@@ -53,6 +59,8 @@ public class BusinessEntity extends BaseEntity {
   private Time closedAt;
 
   private String phone;
+
+  private String price;
 
   private Double rating;
 

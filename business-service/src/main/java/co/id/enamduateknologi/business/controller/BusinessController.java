@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import co.id.enamduateknologi.business.payload.request.DeleteBusinessRequest;
 import co.id.enamduateknologi.business.payload.request.GetBusinessRequest;
@@ -42,13 +43,13 @@ public class BusinessController {
   }
 
   @PutMapping
-  public PutBusinessResponse putBusiness(PutBusinessRequest request) {
+  public PutBusinessResponse putBusiness(@RequestBody PutBusinessRequest request) {
 
     return putBusinessService.execute(request);
   }
 
   @DeleteMapping
-  public DeleteBusinessResponse deleteBusiness(DeleteBusinessRequest request) {
+  public DeleteBusinessResponse deleteBusiness(@RequestBody DeleteBusinessRequest request) {
 
     return deleteBusinessService.execute(request);
   }
