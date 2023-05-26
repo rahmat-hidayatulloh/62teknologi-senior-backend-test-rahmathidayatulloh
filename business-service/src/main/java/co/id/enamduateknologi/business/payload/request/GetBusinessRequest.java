@@ -27,7 +27,7 @@ public class GetBusinessRequest extends BaseRequest {
 
   private Double longitude;
 
-  private int limit;
+  private Integer limit;
 
   private String sortBy;
 

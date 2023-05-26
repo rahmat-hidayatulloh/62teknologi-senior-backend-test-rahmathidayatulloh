@@ -4,11 +4,11 @@ import java.sql.Time;
 import java.util.List;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import co.id.enamduateknologi.business.payload.request.DeleteBusinessRequest;
 import co.id.enamduateknologi.business.payload.request.GetBusinessRequest;
@@ -58,13 +58,13 @@ public class BusinessController {
 
   @GetMapping("/search")
   public GetBusinessResponse getBusinessSearch(
-      @PathVariable("categories") List<String> categories,
-      @PathVariable("latitude") Double latitude,
-      @PathVariable("longitude") Double longitude,
-      @PathVariable("limit") int limit,
-      @PathVariable("sortBy") String sortBy,
-      @PathVariable("openedAt") Time openedAt,
-      @PathVariable("closedAt") Time closedAt ) {
+      @RequestParam(name = "categories", required = false) List<String> categories,
+      @RequestParam(name = "latitude", required = false) Double latitude,
+      @RequestParam(name = "longitude", required = false) Double longitude,
+      @RequestParam(name = "limit", required = false) Integer limit,
+      @RequestParam(name = "sortBy", required = false) String sortBy,
+      @RequestParam(name = "opened_at", required = false) Time openedAt,
+      @RequestParam(name = "closed_at", required = false) Time closedAt ) {
 
     return getBusinessService.execute(GetBusinessRequest.builder()
         .categories(categories)
