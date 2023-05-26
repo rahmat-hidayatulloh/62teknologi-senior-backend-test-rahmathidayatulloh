@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "8ce164fd-395a-4604-8c98-e1f5cb96c513",
+		"name": "62 Teknologi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8575045"
+	},
+	"item": [
+		{
+			"name": "Post Business",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"business\": \r\n    {\r\n      \"alias\": \"golden-boy-pizza-hamburg\",\r\n      \"categories\": [\r\n        {\r\n          \"alias\": \"pizza\",\r\n          \"title\": \"Pizza\"\r\n        },\r\n        {\r\n          \"alias\": \"food\",\r\n          \"title\": \"Food\"\r\n        }\r\n      ],\r\n      \"coordinates\": {\r\n        \"latitude\": 41.7873382568359,\r\n        \"longitude\": -123.051551818848\r\n      },\r\n      \"display_phone\": \"(415) 982-9738\",\r\n      \"distance\": 4992.437696561071,\r\n      \"image_url\": \"https://yelp-photos.yelpcorp.com/bphoto/b0mx7p6x9Z1ivb8yzaU3dg/o.jpg\",\r\n      \"location\": {\r\n        \"address1\": \"James\",\r\n        \"address2\": \"Street\",\r\n        \"address3\": \"68M\",\r\n        \"city\": \"Los Angeles\",\r\n        \"country\": \"US\",\r\n        \"display_address\": [\r\n          \"James\",\r\n          \"Street\",\r\n          \"68M\",\r\n          \"Los Angeles, CA 22399\"\r\n        ],\r\n        \"state\": \"CA\",\r\n        \"zip_code\": \"22399\"\r\n      },\r\n      \"name\": \"Golden Boy Pizza\",\r\n      \"phone\": \"+14159829738\",\r\n      \"price\": \"$\",\r\n      \"rating\": 4,\r\n      \"review_count\": 903,\r\n      \"transactions\": [\r\n        \"restaurant_reservation\"\r\n      ],\r\n      \"url\": \"https://www.yelp.com/biz/golden-boy-pizza-hamburg?adjust_creative=XsIsNkqpLmHqfJ51zfRn3A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XsIsNkqpLmHqfJ51zfRn3A\"\r\n    }\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/business",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"business"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Business",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"business_id\":\"5592d3f0-761c-443e-8041-1ff70bc9b693\",\r\n  \"business\": \r\n    {\r\n      \"alias\": \"golden-boy-pizza-hamburg\",\r\n      \"categories\": [\r\n        {\r\n          \"alias\": \"pizza\",\r\n          \"title\": \"Pizza\"\r\n        },\r\n        {\r\n          \"alias\": \"food\",\r\n          \"title\": \"Food\"\r\n        }\r\n      ],\r\n      \"coordinates\": {\r\n        \"latitude\": 41.7873382568359,\r\n        \"longitude\": -123.051551818848\r\n      },\r\n      \"display_phone\": \"(415) 982-9738\",\r\n      \"distance\": 4992.437696561071,\r\n      \"id\": \"c8cd483b-8f2b-4541-a193-9bbf39e1156e\",\r\n      \"image_url\": \"https://yelp-photos.yelpcorp.com/bphoto/b0mx7p6x9Z1ivb8yzaU3dg/o.jpg\",\r\n      \"location\": {\r\n        \"address1\": \"JamesUpdate\",\r\n        \"address2\": \"Street\",\r\n        \"address3\": \"68M\",\r\n        \"city\": \"Los Angeles\",\r\n        \"country\": \"US\",\r\n        \"display_address\": [\r\n          \"James\",\r\n          \"Street\",\r\n          \"68M\",\r\n          \"Los Angeles, CA 22399\"\r\n        ],\r\n        \"state\": \"CA\",\r\n        \"zip_code\": \"22399\"\r\n      },\r\n      \"name\": \"Golden Boy Pizza\",\r\n      \"phone\": \"+141598297388888\",\r\n      \"price\": \"$\",\r\n      \"rating\": 4,\r\n      \"review_count\": 903,\r\n      \"transactions\": [\r\n        \"restaurant_reservation\"\r\n      ],\r\n      \"url\": \"https://www.yelp.com/biz/golden-boy-pizza-hamburg?adjust_creative=XsIsNkqpLmHqfJ51zfRn3A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=XsIsNkqpLmHqfJ51zfRn3A\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/business",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"business"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete business",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"business_id\":\"5592d3f0-761c-443e-8041-1ff70bc9b693\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/business",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"business"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Business",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/business?categories&latitude&double1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"business"
+					],
+					"query": [
+						{
+							"key": "categories",
+							"value": null
+						},
+						{
+							"key": "latitude",
+							"value": null
+						},
+						{
+							"key": "double1",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
